@@ -1,0 +1,19 @@
+### create course
+POST http://localhost:8080/courses
+content-type: application/json
+
+{
+  "code": "CS544",
+  "name": "EA"
+}
+
+> {% client.global.set("id", response.body.id); %}
+
+### get courses
+GET http://localhost:8080/courses
+
+### get course
+GET http://localhost:8080/courses/{{id}}
+
+### delete course
+DELETE http://localhost:8080/courses/{{id}}

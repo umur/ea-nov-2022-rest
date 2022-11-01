@@ -1,0 +1,35 @@
+### create student
+POST http://localhost:8080/students
+content-type: application/json
+
+{
+  "email": "esaintor@gmail.com",
+  "firstName": "Testuser",
+  "lastName": "Testuser",
+  "major": "CS",
+  "gpa": 3.9,
+  "coursesTaken": [
+    {
+      "id": 880504,
+      "name": "EA",
+      "code": "CS544"
+    }
+  ]
+}
+
+> {% client.global.set("id", response.body.id); %}
+
+### get students
+GET http://localhost:8080/students
+
+### get student
+GET http://localhost:8080/students/{{id}}
+
+### get students by major
+GET http://localhost:8080/students/get-students-by-major/CS
+
+### get courses of student
+GET http://localhost:8080/students/get-courses-by-student-id/{{id}}
+
+### delete student
+DELETE http://localhost:8080/students/{{id}}
