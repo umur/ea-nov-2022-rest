@@ -1,0 +1,11 @@
+com/waa/rest/dto/CourseDto.class
+com/waa/rest/services/StudentService.class
+com/waa/rest/models/Student.class
+com/waa/rest/repositories/StudentRepository.class
+com/waa/rest/dto/StudentDto.class
+com/waa/rest/controllers/StudentController.class
+com/waa/rest/models/Course.class
+com/waa/rest/repositories/CourseRepository.class
+com/waa/rest/services/CourseService.class
+com/waa/rest/controllers/CourseController.class
+com/waa/rest/RestApplication.class

@@ -1,0 +1,11 @@
+/Users/tewellewelemariam/Documents/EA/labs/ea-nov-2022-rest/backend/src/main/java/com/waa/rest/dto/CourseDto.java
+/Users/tewellewelemariam/Documents/EA/labs/ea-nov-2022-rest/backend/src/main/java/com/waa/rest/controllers/CourseController.java
+/Users/tewellewelemariam/Documents/EA/labs/ea-nov-2022-rest/backend/src/main/java/com/waa/rest/models/Student.java
+/Users/tewellewelemariam/Documents/EA/labs/ea-nov-2022-rest/backend/src/main/java/com/waa/rest/repositories/CourseRepository.java
+/Users/tewellewelemariam/Documents/EA/labs/ea-nov-2022-rest/backend/src/main/java/com/waa/rest/models/Course.java
+/Users/tewellewelemariam/Documents/EA/labs/ea-nov-2022-rest/backend/src/main/java/com/waa/rest/controllers/StudentController.java
+/Users/tewellewelemariam/Documents/EA/labs/ea-nov-2022-rest/backend/src/main/java/com/waa/rest/services/StudentService.java
+/Users/tewellewelemariam/Documents/EA/labs/ea-nov-2022-rest/backend/src/main/java/com/waa/rest/RestApplication.java
+/Users/tewellewelemariam/Documents/EA/labs/ea-nov-2022-rest/backend/src/main/java/com/waa/rest/services/CourseService.java
+/Users/tewellewelemariam/Documents/EA/labs/ea-nov-2022-rest/backend/src/main/java/com/waa/rest/repositories/StudentRepository.java
+/Users/tewellewelemariam/Documents/EA/labs/ea-nov-2022-rest/backend/src/main/java/com/waa/rest/dto/StudentDto.java
