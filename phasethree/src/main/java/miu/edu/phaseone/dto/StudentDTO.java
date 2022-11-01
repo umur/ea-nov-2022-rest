@@ -1,16 +1,20 @@
-package miu.edu.phaseone.model;
+package miu.edu.phaseone.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Data
-public class Student {
+@NoArgsConstructor
+@AllArgsConstructor
+public class StudentDTO {
     private Long id;
     private String firstName;
     private String lastName;
     private String email;
     private String major;
     private Double gpa;
-    private List<Course> coursesTaken;
+    private List<CourseDTO> coursesTaken;
 }

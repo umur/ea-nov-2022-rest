@@ -1,33 +1,42 @@
 package miu.edu.phaseone.service;
 
+import lombok.RequiredArgsConstructor;
 import miu.edu.phaseone.model.Course;
-import miu.edu.phaseone.repository.CourseRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import miu.edu.phaseone.model.Student;
+import miu.edu.phaseone.repository.StudentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CourseService {
+@RequiredArgsConstructor
+public class StudentService {
 
-    @Autowired
-    CourseRepository repository;
+    private final StudentRepository repository;
 
-    public List<Course> findAll() {
+    public List<Student> findAll() {
         return repository.findAll();
     }
 
-    public Optional<Course> findOne(Long id) {
+    public Optional<Student> findOne(Long id) {
         return repository.findOne(id);
     }
 
-    public Course save(Course course) {
+    public Student save(Student course) {
         return repository.save(course);
     }
 
     public void deleteOne(Long id) {
         repository.deleteOne(id);
+    }
+
+    public List<Student> getStudentsByMajor(String major) {
+        return repository.getStudentsByMajor(major);
+    }
+
+    public List<Course> getCoursesByStudentId(Long studentId) {
+        return repository.getCoursesByStudentId(studentId);
     }
 
 }

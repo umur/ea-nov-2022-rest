@@ -1,32 +1,32 @@
-package miu.edu.phaseone.dto;
+package miu.edu.phaseone.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import miu.edu.phaseone.model.Student;
+import miu.edu.phaseone.dto.StudentDTO;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Data
 @AllArgsConstructor
-public class StudentDTO {
+public class Student {
     private Long id;
     private String firstName;
     private String lastName;
     private String email;
     private String major;
     private Double gpa;
-    private List<CourseDTO> coursesTaken;
+    private List<Course> coursesTaken;
 
-    public Student toEntity() {
-        return new Student(
+    public StudentDTO toDTO() {
+        return new StudentDTO(
                 this.getId(),
                 this.getFirstName(),
                 this.getLastName(),
                 this.getEmail(),
                 this.getMajor(),
                 this.getGpa(),
-                this.getCoursesTaken().stream().map(CourseDTO::toEntity).collect(Collectors.toList())
+                this.getCoursesTaken().stream().map(Course::toDTO).collect(Collectors.toList())
         );
     }
 }
