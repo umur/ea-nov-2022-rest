@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "ef8108b8-7b5c-44d6-81ce-fed361d47c61",
+		"name": "Restfull Phase 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8974004"
+	},
+	"item": [
+		{
+			"name": "Get All Courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{commonPath}}/courses",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{commonPath}}",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{commonPath}}/courses/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{commonPath}}",
+						"courses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : 3,\n    \"name\" : \"FPP\",\n    \"code\" : \"003\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/{{commonPath}}/courses",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{commonPath}}",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Course",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : 3,\n    \"name\" : \"MPP\",\n    \"code\" : \"003\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/{{commonPath}}/courses",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{commonPath}}",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Course",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{commonPath}}/courses/3",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{commonPath}}",
+						"courses",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{commonPath}}/students",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{commonPath}}",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{commonPath}}/students/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{commonPath}}",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ceate Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : \"3\",\n    \"firstName\" : \"Tom\", \n    \"lastName\" : \"Cruise\",\n    \"email\" : \"tom@miu.edu\",\n    \"major\" : \"ComPro\",\n    \"gpa\" : \"4.0\",\n    \"coursesTaken\" : [\n    {\n        \"id\": \"1\",\n        \"name\": \"EA\",\n        \"code\": \"001\"\n    },\n    {\n        \"id\": \"2\",\n        \"name\": \"WAA\",\n        \"code\": \"002\"\n    }\n]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/{{commonPath}}/students",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{commonPath}}",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : \"3\",\n    \"firstName\" : \"Tom\", \n    \"lastName\" : \"Cruise\",\n    \"email\" : \"tom@miu.edu\",\n    \"major\" : \"ComPro\",\n    \"gpa\" : \"4.0\",\n    \"coursesTaken\" : [\n    {\n        \"id\": \"1\",\n        \"name\": \"EA\",\n        \"code\": \"001\"\n    },\n    {\n        \"id\": \"2\",\n        \"name\": \"WAA\",\n        \"code\": \"002\"\n    }\n]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/{{commonPath}}/students",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{commonPath}}",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Student",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{commonPath}}/students/3",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{commonPath}}",
+						"students",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Students By Major",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{commonPath}}/students/filter?major=ComPro",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{commonPath}}",
+						"students",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "major",
+							"value": "ComPro"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Courses By Student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{commonPath}}/students/1/courses",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{commonPath}}",
+						"students",
+						"1",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "commonPath",
+			"value": "api/v3",
+			"type": "string"
+		}
+	]
+}
