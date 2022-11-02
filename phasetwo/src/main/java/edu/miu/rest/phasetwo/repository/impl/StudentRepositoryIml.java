@@ -1,10 +1,10 @@
-package edu.miu.rest.phaseone.repository.impl;
+package edu.miu.rest.phasetwo.repository.impl;
 
-import edu.miu.rest.phaseone.entity.Course;
-import edu.miu.rest.phaseone.entity.Student;
-import edu.miu.rest.phaseone.repository.StudentRepository;
-import edu.miu.rest.phaseone.storage.EnumID;
-import edu.miu.rest.phaseone.storage.FakeDB;
+import edu.miu.rest.phasetwo.entity.Course;
+import edu.miu.rest.phasetwo.entity.Student;
+import edu.miu.rest.phasetwo.repository.StudentRepository;
+import edu.miu.rest.phasetwo.storage.EnumID;
+import edu.miu.rest.phasetwo.storage.FakeDB;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Repository;
 
