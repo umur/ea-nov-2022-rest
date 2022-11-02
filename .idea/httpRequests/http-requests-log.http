@@ -1,0 +1,119 @@
+POST http://localhost:8080/courses
+Content-Type: application/json
+
+  {
+    "id": 4,
+    "name": "DBMS",
+    "code": "CS425"
+  }
+
+###
+
+POST http://localhost:8080/courses
+Content-Type: application/json
+
+  {
+    "id": 4,
+    "name": "DBMS",
+    "code": "CS425"
+  }
+
+<> 2022-11-02T002933.500.json
+
+###
+
+POST http://localhost:8080/courses
+Content-Type: application/json
+
+  {
+    "id": 4,
+    "name": "DBMS",
+    "code": "CS425"
+  }
+
+<> 2022-11-02T002916.500.json
+
+###
+
+POST http://localhost:8080/courses
+Content-Type: application/json
+
+  {
+    "id": 4,
+    "name": "DBMS",
+    "code": "CS425"
+  }
+
+<> 2022-11-02T002903.500.json
+
+###
+
+GET http://localhost:8080/courses
+
+<> 2022-11-02T002855.200.json
+
+###
+
+PUT http://localhost:8080/courses/4
+Content-Type: application/json
+
+{
+    "id": 4,
+    "name": "DBMS",
+    "code": "CS426"
+  }
+
+###
+
+POST http://localhost:8080/courses
+Content-Type: application/json
+
+  {
+    "id": 4,
+    "name": "DBMS",
+    "code": "CS425"
+  }
+
+<> 2022-11-02T002831.500.json
+
+###
+
+GET http://localhost:8080/courses
+
+<> 2022-11-02T002818.200.json
+
+###
+
+DELETE http://localhost:8080/courses/4
+
+###
+
+GET http://localhost:8080/courses
+
+<> 2022-11-02T002738.200.json
+
+###
+
+GET http://localhost:8080/courses
+
+<> 2022-11-02T002724.200.json
+
+###
+
+POST http://localhost:8080/courses
+Content-Type: application/json
+
+  {
+    "id": 4,
+    "name": "DBMS",
+    "code": "CS425"
+  }
+
+###
+
+GET http://localhost:8080/courses
+
+<> 2022-11-02T002450.200.json
+
+###
+
