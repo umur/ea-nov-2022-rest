@@ -1,0 +1,11 @@
+/Users/vishwa/MIU/EA/Assignments/ea-nov-2022-rest/src/main/java/com/example/rest/repositories/StudentRepository.java
+/Users/vishwa/MIU/EA/Assignments/ea-nov-2022-rest/src/main/java/com/example/rest/RestApplication.java
+/Users/vishwa/MIU/EA/Assignments/ea-nov-2022-rest/src/main/java/com/example/rest/services/impl/StudentServiceImpl.java
+/Users/vishwa/MIU/EA/Assignments/ea-nov-2022-rest/src/main/java/com/example/rest/entities/Course.java
+/Users/vishwa/MIU/EA/Assignments/ea-nov-2022-rest/src/main/java/com/example/rest/entities/Student.java
+/Users/vishwa/MIU/EA/Assignments/ea-nov-2022-rest/src/main/java/com/example/rest/services/impl/CourseServiceImpl.java
+/Users/vishwa/MIU/EA/Assignments/ea-nov-2022-rest/src/main/java/com/example/rest/controllers/CourseController.java
+/Users/vishwa/MIU/EA/Assignments/ea-nov-2022-rest/src/main/java/com/example/rest/services/StudentService.java
+/Users/vishwa/MIU/EA/Assignments/ea-nov-2022-rest/src/main/java/com/example/rest/repositories/CourseRepository.java
+/Users/vishwa/MIU/EA/Assignments/ea-nov-2022-rest/src/main/java/com/example/rest/controllers/StudentController.java
+/Users/vishwa/MIU/EA/Assignments/ea-nov-2022-rest/src/main/java/com/example/rest/services/CourseService.java
