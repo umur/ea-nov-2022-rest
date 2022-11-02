@@ -1,0 +1,80 @@
+###
+GET http://localhost:8080/student
+
+###
+GET http://localhost:8080/student/1
+
+###
+PUT http://localhost:8080/student/1
+
+###
+DELETE  http://localhost:8080/student/1
+
+###
+POST http://localhost:8080/student
+Content-Type: application/json
+
+{
+    "id" : 4, 
+    "firstName": "Binbbbiam",
+    "lastName": "Nigffusse",
+    "email": "bffini.nig@gmail.com",
+    "major": "MWA",
+    "gpa": 3.00
+}
+
+###
+
+###
+PUT http://localhost:8080/student/3 
+Content-Type: application/json
+
+{
+    "id" : 3, 
+    "firstName": "Biniam",
+    "lastName": "Nigusse",
+    "email": "bini.nig@gmail.com",
+    "major": "WAP",
+    "gpa": 4.00
+}
+
+###
+###
+GET  http://localhost:8080/student/major/WAP
+
+
+###
+GET  http://localhost:8080/student/courses/1
+
+
+###
+GET http://localhost:8080/course
+
+###
+GET http://localhost:8080/course/9
+
+###
+DELETE  http://localhost:8080/course/9
+
+###
+POST http://localhost:8080/course
+Content-Type: application/json
+
+{
+    "id": 7,
+    "name": "Advanced WAP",
+    "courseCode": "CSC 406"
+}
+
+###
+PUT http://localhost:8080/course/7
+content-type: application/json
+
+{
+    "id": 7,
+    "name": "Advanced WAP",
+    "courseCode": "CSC 444"
+}
+
+
+
