@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "07beae06-54b3-4f4d-ace8-db8d057a9c1d",
+		"name": "EA-Lab-2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23283148"
+	},
+	"item": [
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "addStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"003\",\n    \"firstName\": \"student13\",\n    \"lastName\": \"student13LN\",\n    \"email\": \"studentMail\",\n    \"major\": \"MSD\",\n    \"gpa\": 4.0,\n    \"coursesTaken\": [\n        {\n            \"id\": \"CS544\",\n            \"name\": \"MWA\",\n            \"code\": \"CS544-Nov\"\n        },\n        {\n            \"id\": \"CS544-2\",\n            \"name\": \"MWA-2\",\n            \"code\": \"CS544-Nov-2\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/students",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStudentById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"003\",\n    \"firstName\": \"student13Updated\",\n    \"lastName\": \"student13LN\",\n    \"email\": \"studentMail\",\n    \"major\": \"MSD\",\n    \"gpa\": 4.0,\n    \"coursesTaken\": [\n        {\n            \"id\": \"CS544\",\n            \"name\": \"MWA\",\n            \"code\": \"CS544-Nov\"\n        },\n        {\n            \"id\": \"CS544-2\",\n            \"name\": \"MWA-2\",\n            \"code\": \"CS544-Nov-2\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/students",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students"
+							]
+						},
+						"description": "Put"
+					},
+					"response": []
+				},
+				{
+					"name": "getStudents",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/students",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteStudenById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"003\",\n    \"firstName\": \"student13\",\n    \"lastName\": \"student13LN\",\n    \"email\": \"studentMail\",\n    \"major\": \"MSD\",\n    \"gpa\": 4.0,\n    \"coursesTaken\": [\n        {\n            \"id\": \"CS544\",\n            \"name\": \"MWA\",\n            \"code\": \"CS544-Nov\"\n        },\n        {\n            \"id\": \"CS544-2\",\n            \"name\": \"MWA-2\",\n            \"code\": \"CS544-Nov-2\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/students/002",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students",
+								"002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStudentsByMajor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/students/search?major=MSD",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students",
+								"search"
+							],
+							"query": [
+								{
+									"key": "major",
+									"value": "MSD"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStudentById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/students/003",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students",
+								"003"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCoursesByStudentId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/students/search?id=002",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students",
+								"search"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "002"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "getCourses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/courses",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCoursesById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/courses/CS544",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"courses",
+								"CS544"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCoursesById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"CS544\",\n    \"name\": \"MWA-updated\",\n    \"code\": \"CS544-Nov\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/courses/CS544",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"courses",
+								"CS544"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCoursesById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/courses/CS544",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"courses",
+								"CS544"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addCourses",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"CS545\",\n    \"name\": \"MWA-2\",\n    \"code\": \"CS544-Nov\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/courses/CS544",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"courses",
+								"CS544"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
