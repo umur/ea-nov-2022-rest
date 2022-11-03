@@ -1,5 +1,6 @@
 package com.example.lab2.service;
 
+import com.example.lab2.entity.Course;
 import com.example.lab2.entity.Student;
 import com.example.lab2.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,14 @@ public class StudentService {
 
     public List<Student> getAll(){
         return repository.getAll();
+    }
+
+    public List<Student> getStudentsByMajor(String major){
+        return repository.getStudentsByMajor(major);
+    }
+
+    public List<Course> getCoursesByStudentId(Integer id){
+        return repository.getCoursesByStudentId(id);
     }
 
     public void add(Student s){
