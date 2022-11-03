@@ -74,4 +74,10 @@ public class StudentRepository {
         }
     }
 
+    public List<Student> getStudentsByMajor(String major) {
+        return students.stream()
+                .filter(s -> s.getMajor().equals(major))
+                .collect(Collectors.toList());
+    }
+
 }

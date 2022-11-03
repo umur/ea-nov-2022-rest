@@ -39,5 +39,10 @@ public class StudentServiceImpl implements StudentService {
         studentRepository.deleteById(id);
     }
 
+    @Override
+    public List<Student> getStudentsByMajor(String major) {
+        return studentRepository.getStudentsByMajor(major);
+    }
+
 
 }

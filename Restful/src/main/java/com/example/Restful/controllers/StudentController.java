@@ -50,4 +50,10 @@ public class StudentController {
         return map;
     }
 
+    @GetMapping("/filter")
+    public List<Student> getStudentsByMajor(@RequestParam String major) {
+        return studentService.getStudentsByMajor(major);
+    }
+
+
 }
