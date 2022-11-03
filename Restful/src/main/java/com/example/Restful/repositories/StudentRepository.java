@@ -7,11 +7,12 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 public class StudentRepository {
 
-    private static final List<Student> students = new ArrayList<>();
+    private static List<Student> students = new ArrayList<>();
     static {
         var c1 = new Course(1, "EA", "CS544");
         var c2 = new Course(2, "WAP", "CS422");
@@ -26,6 +27,51 @@ public class StudentRepository {
 
     public List<Student> getAll() {
         return students;
+    }
+
+    public void create(Student student) {
+        students.add(student);
+    }
+
+    public Student findById(int id) {
+        return students.stream()
+                .filter(s -> s.getId() == id)
+                .findFirst()
+                .get();
+    }
+
+    public void update(Student student, int id) {
+        students = students.stream()
+                .map(s -> {
+                    if (s.getId() == 0) {
+                        s = student;
+                    }
+                    return s;
+                }).collect(Collectors.toList());
+    }
+
+    public void deleteById(int id) {
+        students = students.stream()
+                .filter(s -> s.getId() != id)
+                .collect(Collectors.toList());
+    }
+
+    public void deleteByEntity(Student student) {
+        students = students.stream()
+                .filter(s -> !s.equals(student))
+                .collect(Collectors.toList());
+    }
+
+    public void addCourse(int id, Course course) {
+        Student student = students.stream()
+                .filter(s -> s.getId() == id)
+                .findFirst()
+                .get();
+        if (student != null) {
+            List<Course> courses = student.getCoursesTaken();
+            courses.add(course);
+            student.setCoursesTaken(courses);
+        }
     }
 
 }
