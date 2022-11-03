@@ -38,4 +38,9 @@ public class StudentService implements IStudentService {
     public void delete(Student student) {
         studentRepo.delete(student);
     }
+
+    @Override
+    public List<Student> findStudentByMajor(String major) {
+        return studentRepo.findStudentsByMajor(major);
+    }
 }

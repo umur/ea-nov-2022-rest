@@ -11,4 +11,6 @@ public interface IStudentService {
     void deleteById(Long id);
 
     void delete(Student student);
+
+    List<Student> findStudentByMajor(String major);
 }

@@ -53,4 +53,9 @@ public class StudentController {
     public Student findById(@PathVariable Long id) {
         return studentService.findById(id);
     }
+
+    @GetMapping("/filter")
+    public List<Student> findStudentByMajor(@RequestParam String major) {
+        return studentService.findStudentByMajor(major);
+    }
 }
