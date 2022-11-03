@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public class StudentRepository {
 
-    private static List<Student> students;
+    private static final List<Student> students = new ArrayList<>();
     static {
         var c1 = new Course(1, "EA", "CS544");
         var c2 = new Course(2, "WAP", "CS422");
@@ -23,4 +23,9 @@ public class StudentRepository {
         students.add(s1);
         students.add(s2);
     }
+
+    public List<Student> getAll() {
+        return students;
+    }
+
 }
