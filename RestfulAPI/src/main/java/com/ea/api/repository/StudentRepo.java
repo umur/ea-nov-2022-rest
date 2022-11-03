@@ -24,14 +24,23 @@ public class StudentRepo {
         courses.add(c2);
         courses.add(c3);
         courses.add(c4);
-    }
 
-    static {
-        var s1 = new Student(1, "esme", "mih", "em@gmail.com", "cs", 3.8, courses);
-        var s2 = new Student(2, "john", "Dave", "john@gmail.com", "cs", 3.86, courses);
-        var s3 = new Student(3, "David", "Thomas", "dav@gmail.com", "Compro", 3.9, courses);
-        var s4 = new Student(4, "Dawit", "Sander", "dawit@gmail.com", "Compro", 3.8, courses);
-        var s5 = new Student(5, "em", "me", "em@gmail.com", "cs", 3.75, courses);
+        var s1 = new Student(1, "esme", "mih", "em@gmail.com", "cs", 3.8, new ArrayList<>());
+        var s2 = new Student(2, "john", "Dave", "john@gmail.com", "cs", 3.86, new ArrayList<>());
+        var s3 = new Student(3, "David", "Thomas", "dav@gmail.com", "Compro", 3.9, new ArrayList<>());
+        var s4 = new Student(4, "Dawit", "Sander", "dawit@gmail.com", "Compro", 3.8, new ArrayList<>());
+        var s5 = new Student(5, "em", "me", "em@gmail.com", "cs", 3.75, new ArrayList<>());
+
+        s1.getCoursesTaken().add(c1);
+        s1.getCoursesTaken().add(c2);
+        s2.getCoursesTaken().add(c2);
+        s2.getCoursesTaken().add(c3);
+        s3.getCoursesTaken().add(c3);
+        s3.getCoursesTaken().add(c3);
+        s4.getCoursesTaken().add(c2);
+        s4.getCoursesTaken().add(c4);
+        s5.getCoursesTaken().add(c1);
+        s5.getCoursesTaken().add(c4);
         students.add(s1);
         students.add(s2);
         students.add(s3);
@@ -85,7 +94,8 @@ public class StudentRepo {
         return students.stream().filter(x -> x.getMajor().equals(major)).collect(Collectors.toList());
     }
  public List<Course> getCoursesByStudentId(int studentId){
-        return courses.stream().filter(c->students.stream().map(s->s.getId()).equals(studentId)).collect(Collectors.toList());
+        return students.stream().filter(s->s.getId()==studentId).findAny()
+                .orElseThrow(()-> new RuntimeException("Student does not exist with this Id"))
+                .getCoursesTaken();
  }
-
 }
