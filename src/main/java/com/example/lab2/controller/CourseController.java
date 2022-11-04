@@ -1,7 +1,7 @@
 package com.example.lab2.controller;
 
-import com.example.lab2.model.Course;
-import com.example.lab2.service.CourseService;
+import com.example.lab2.model.dto.CourseDTO;
+import com.example.lab2.service.ICourseService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -9,19 +9,19 @@ import java.util.List;
 @RequestMapping("/courses")
 @RestController
 public class CourseController {
-    private final CourseService courseService;
+    private final ICourseService courseService;
 
-    public CourseController(CourseService courseService) {
+    public CourseController(ICourseService courseService) {
         this.courseService = courseService;
     }
 
     @GetMapping
-    public List<Course> getCourse(){
+    public List<CourseDTO> getCourse(){
         return courseService.getCourse();
     }
 
     @PostMapping
-    public void addCourse(@RequestBody Course course){
+    public void addCourse(@RequestBody CourseDTO course){
         courseService.addCourse(course);
     }
 
@@ -31,7 +31,7 @@ public class CourseController {
     }
 
     @PutMapping("/{id}")
-    public void updateCourse(@PathVariable int id, @RequestBody Course course){
+    public void updateCourse(@PathVariable int id, @RequestBody CourseDTO course){
         courseService.updateCourse(id, course);
     }
 }

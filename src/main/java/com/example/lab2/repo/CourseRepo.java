@@ -34,4 +34,7 @@ public class CourseRepo {
             courses.set(i, course);
         }
     }
+    public Course getCourseById(int id){
+       return courses.stream().filter(c -> c.getId()== id).toList().get(0);
+    }
 }
