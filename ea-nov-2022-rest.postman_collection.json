@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "4b5dcc56-80b2-48d2-8bcd-252d02da368b",
+		"name": "ea-nov-2022-rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4020873"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/student/dto/major?major=student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student/dto/major?major=student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"dto",
+						"major"
+					],
+					"query": [
+						{
+							"key": "major",
+							"value": "student"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/student/dto/getById/5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student/dto/getById/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"dto",
+						"getById",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/student/dto/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\" :5,\n\"firstName\":\"Umor\",\n\"lastName\":\"Inan\",\n\"email\":\"b.battah@hotmail.com\",\n\"major\":\"Faculty\",\n\"gpa\":7.1,\n\"coursesTaken\":[\n    {\n        \"id\": 4,\n        \"name\": \"EA\",\n        \"code\": \"523\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"BD\",\n        \"code\": \"544\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"BDT\",\n        \"code\": \"544\"\n    }\n]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/dto/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"dto",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/student/dto/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student/dto/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"dto",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/student/getById/3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student/getById/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"getById",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/student/major?major=student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student/major?major=student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"major"
+					],
+					"query": [
+						{
+							"key": "major",
+							"value": "student"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/student/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\" :4,\n\"firstName\":\"Bara\",\n\"lastName\":\"Batta\",\n\"email\":\"b.battah@hotmail.com\",\n\"major\":\"student\",\n\"gpa\":7.1,\n\"coursesTaken\":[\n    {\n        \"id\": 4,\n        \"name\": \"EA\",\n        \"code\": \"523\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"BD\",\n        \"code\": \"544\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"BDT\",\n        \"code\": \"544\"\n    }\n]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
